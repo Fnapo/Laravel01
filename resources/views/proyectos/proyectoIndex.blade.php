@@ -24,7 +24,7 @@
     <?php $vacio = "Sin proyectos para mostrar"; ?>
     <h1 class="texto-c">Proyectos</h1>
     <div class="texto-c">
-        <button type="button" class="boton-caja bordes-2">
+        <button type="button" class="caja-boton bordes-2">
             <a class="boton" href="{{route('proyectos.create')}}">{{'Crear un proyecto'}}</a>
         </button>
     </div>
@@ -52,13 +52,14 @@
                         <!-- route('nombre', parámetros)-->
                     </td>
                     <td class="celda">
-                        <button type="button" class="boton-caja bordes-2">
+                        <button type="button" class="caja-boton bordes-2">
                             <a class="boton" href="{{route('proyectos.edit', $proyecto->id)}}">{{'Editar'}}</a>
                         </button>
                     </td>
                     <td class="celda">
-                        <button type="button" class="boton-caja bordes-2">
-                            <a class="boton" href="{{route('proyectos.destroy', $proyecto->id)}}">{{'Borrar'}}</a>
+                        <button type="button" class="caja-boton bordes-2">
+                            <a class="boton-peligro"
+                                href="{{route('proyectos.destroy', $proyecto->id)}}">{{'Borrar'}}</a>
                         </button>
                     </td>
                 </tr>

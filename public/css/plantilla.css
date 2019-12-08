@@ -15,22 +15,23 @@ a.desactivado {
 [class^="boton"] {
     font-size: larger;
     color: black;
+    text-decoration: none;
     background-color: olive;
 }
 
-.boton {
-    text-decoration: none;
+.boton-peligro {
+    background-color: red;
 }
 
 .bordes2 {
     border: 2px solid black;
 }
 
-.boton:hover {
+a[class^="boton"]:hover {
     background-color: aquamarine;
 }
 
-.boton-caja {
+.caja-boton {
     background-color: aliceblue;
     padding: 4px;
 }

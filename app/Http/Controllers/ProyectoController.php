@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\GuardarProyectoRequest;
 use App\Modelos\Proyecto;
 use Illuminate\Http\Request;
 
@@ -66,6 +67,7 @@ class ProyectoController extends Controller
         // lo mejor es usar una variable en el validate. Y ayuda al mantenimiento de la app,
         // pero quitando $fillable y escribiendo $guarded = []; pero todos los campos llenables deben estar en validate().
         // Aunque sea como 'nombre' => ''
+        // Haré uso de un FormRequest en el update.
         Proyecto::create($contenido);
 
         return redirect()->route('proyectos.index');
@@ -94,6 +96,9 @@ class ProyectoController extends Controller
     public function edit($id)
     {
         //
+        $proyecto = Proyecto::findOrFail($id);
+
+        return view('proyectos/proyectoEdit', compact('proyecto'));
     }
 
     /**
@@ -103,9 +108,19 @@ class ProyectoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(GuardarProyectoRequest $request, $id)
     {
         //
+        // Haré uso de un FormRequest GuardarProyectoRequest $request
+        // Almacenado en App\Http\Requests
+        $contenido = $request->validated();
+        $proyecto = Proyecto::findOrFail($id);
+
+        // return $proyecto; // Mostrar tipo json bonito.
+        $proyecto->update($contenido);
+
+        return redirect()->route('proyectos.show', $id);
+        // Para no repetir route('proyectos.index')
     }
 
     /**
