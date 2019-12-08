@@ -1,0 +1,126 @@
+/**/
+
+body {
+    background-color: lightgray;
+    width: 100%;
+}
+
+a.desactivado {
+    color: red;
+    text-decoration: none;
+    pointer-events: none;
+    /* Desactiva el ratón sobre el link */
+}
+
+[class^="boton"] {
+    font-size: larger;
+    color: black;
+    background-color: olive;
+}
+
+.boton {
+    text-decoration: none;
+}
+
+.bordes2 {
+    border: 2px solid black;
+}
+
+.boton:hover {
+    background-color: aquamarine;
+}
+
+.boton-caja {
+    background-color: aliceblue;
+    padding: 4px;
+}
+
+.boton-caja:hover {
+    background-color: aliceblue;
+}
+
+a.color-az {
+    color: blue;
+}
+
+.fondo-v {
+    background-color: darkseagreen;
+}
+
+.input-15 {
+    font-size: larger;
+    width: 15em;
+}
+
+.boton-15 {
+    width: 15em;
+}
+
+.boton-15:hover {
+    background-color: aqua;
+}
+
+.color-r {
+    color: red;
+}
+
+.texto-c {
+    text-align: center;
+}
+
+.texto-20 {
+    font-size: 20px;
+}
+
+.fondo-alice {
+    background-color: aliceblue;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.ancho10 {
+    width: 10em;
+    display: inline-block;
+}
+
+.alto2 {
+    line-height: 2em;
+}
+
+.alto3 {
+    line-height: 3em;
+}
+
+.alineado-v {
+    vertical-align: middle;
+}
+
+.margen-r {
+    margin-right: 10px;
+}
+
+.centraTabla {
+    text-align: center;
+}
+
+.tabla-i-b {
+    display: inline-block;
+}
+
+.tabla {
+    border: 5px solid saddlebrown;
+    display: inline-block;
+}
+
+.colapsada {
+    border-collapse: collapse;
+}
+
+.celda {
+    border: 2px solid black;
+    padding: 2px;
+}
+
+a {
+    padding: 2px;
+}
