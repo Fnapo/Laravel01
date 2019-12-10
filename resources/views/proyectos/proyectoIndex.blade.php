@@ -24,8 +24,8 @@
     <?php $vacio = "Sin proyectos para mostrar"; ?>
     <h1 class="texto-c">Proyectos</h1>
     <div class="texto-c">
-        <button type="button" class="caja-boton bordes-2">
-            <a class="boton" href="{{route('proyectos.create')}}">{{'Crear un proyecto'}}</a>
+        <button class="caja-boton bordes-2">
+            <a class="boton-normal" href="{{route('proyectos.create')}}">{{'Crear un proyecto'}}</a>
         </button>
     </div>
     <br />
@@ -53,14 +53,16 @@
                     </td>
                     <td class="celda">
                         <button type="button" class="caja-boton bordes-2">
-                            <a class="boton" href="{{route('proyectos.edit', $proyecto->id)}}">{{'Editar'}}</a>
+                            <a class="boton-normal" href="{{route('proyectos.edit', $proyecto->id)}}">{{'Editar'}}</a>
                         </button>
                     </td>
                     <td class="celda">
-                        <button type="button" class="caja-boton bordes-2">
-                            <a class="boton-peligro"
-                                href="{{route('proyectos.destroy', $proyecto->id)}}">{{'Borrar'}}</a>
-                        </button>
+                        <!-- Para borrar necessito un pequeño form pues se utiliza el 'falso method' delete -->
+                        <form method="POST" action="{{route('proyectos.destroy', $proyecto->id)}}">
+                            @csrf
+                            @method("DELETE")
+                            <input type="submit" class="boton-peligro pad-4" value="Borrar">
+                        </form>
                     </td>
                 </tr>
                 @empty

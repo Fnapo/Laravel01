@@ -19,14 +19,14 @@
                         <label class="ancho10 texto-c fondo-alice">Nombre:</label>
                     </td>
                     <td>
-                        <input class="input-15 fondo-v" type="text" name="nombre" value="{{old('nombre')}}"
+                        <input class="ancho-15 fondo-v" type="text" name="nombre" value="{{old('nombre')}}"
                             placeholder="Tu nombre ...">
                     </td>
                     <td>
                         <label class="ancho10 texto-c fondo-alice">email:</label>
                     </td>
                     <td>
-                        <input class="input-15 fondo-v" type="email" name="email" value="{{old('email')}}"
+                        <input class="ancho-15 fondo-v" type="email" name="email" value="{{old('email')}}"
                             placeholder="Tu email ...">
                     </td>
                 </tr>
@@ -43,14 +43,14 @@
                         <label class="ancho10 texto-c fondo-alice">Asunto:</label>
                     </td>
                     <td>
-                        <input class="input-15 fondo-v" type="text" name="asunto" value="{{old('asunto')}}"
+                        <input class="ancho-15 fondo-v" type="text" name="asunto" value="{{old('asunto')}}"
                             placeholder="Asunto del correo ...">
                     </td>
                     <td>
                         <label class="ancho10 texto-c fondo-alice alineado-v">Mensaje:</label>
                     </td>
                     <td>
-                        <textarea class="input-15 fondo-v margen alineado-v" name="mensaje"
+                        <textarea class="ancho-15 fondo-v margen alineado-v" name="mensaje"
                             placeholder="Tu mensaje ...">{{old('mensaje')}}</textarea>
                     </td>
                 </tr>
@@ -71,10 +71,10 @@
             <tfoot class="texto-c">
                 <tr>
                     <td colspan="2">
-                        <input type="submit" class="boton-15" type="submit">
+                        <input type="submit" class="ancho-15 boton-normal" type="submit">
                     </td>
                     <td colspan="2">
-                        <input type="reset" class="boton-15" type="reset">
+                        <input type="reset" class="ancho-15 boton-normal" type="reset">
                     </td>
                 </tr>
             </tfoot>
@@ -82,28 +82,28 @@
         <!--
     <p class="alto2">
         <label class="ancho10 texto-c fondo-alice">Nombre:</label>
-        <input class="input-15 fondo-v" type="text" name="nombre"
+        <input class="ancho-15 fondo-v" type="text" name="nombre"
              placeholder="Tu nombre ..."><br />
         <label class=""></label>
     </p>
     <p class="alto2">
         <label class="ancho10 texto-c fondo-alice">email:</label>
-        <input class="input-15 fondo-v" type="email" name="email" placeholder="Tu email ...">
+        <input class="ancho-15 fondo-v" type="email" name="email" placeholder="Tu email ...">
     </p>
     <p class="alto2">
         <label class="ancho10 texto-c fondo-alice">Asunto:</label>
-        <input class="input-15 fondo-v" type="text" name="asunto"
+        <input class="ancho-15 fondo-v" type="text" name="asunto"
              placeholder="Asunto del correo ...">
     </p>
     <p class="alto3">
         <label class="ancho10 texto-c fondo-alice alineado-v">Mensaje:</label>
-        <textarea class="input-15 fondo-v margen alineado-v" name="mensaje" "
+        <textarea class="ancho-15 fondo-v margen alineado-v" name="mensaje" "
             placeholder="Tu mensaje ..."></textarea>
 
     </p>
     <p class="alto2">
-        <input type="submit" class="input-15 fondo-v" type="submit">
-        <input type="reset" class="input-15 fondo-v" type="reset">
+        <input type="submit" class="ancho-15 fondo-v" type="submit">
+        <input type="reset" class="ancho-15 fondo-v" type="reset">
     </p>
     -->
     </form>

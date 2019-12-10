@@ -39,7 +39,7 @@ class ProyectoController extends Controller
     public function create()
     {
         //
-        return view('proyectos/proyectoCreate');
+        return view('proyectos/proyectoCreate', ['proyecto' => null]);
     }
 
     /**
@@ -132,5 +132,10 @@ class ProyectoController extends Controller
     public function destroy($id)
     {
         //
+        $proyecto = Proyecto::findOrFail($id);
+
+        $proyecto->delete();
+
+        return redirect()->route('proyectos.index');
     }
 }
