@@ -15,8 +15,10 @@
         <!-- Cambia como obtener el nombre de la ruta actual, se hace con \Route::current()->getName()
         o \Route::currentRouteName()
         Route esta definida en \vendor\laravel\...\Route.php como hija de la clase static Facade -->
-        @include('./parciales/nav')
-        <!-- También vale ('parciales/nav'), con ./ te ayuda en la navegación, pero siempre sin .blade.php -->
+        @include('parciales/nav')
+        <!-- Es idéntico a include('parciales.nav') -->
+        <!-- También vale ('./parciales/nav'), con ./ es un poco más engorroso la visión del link, pero siempre sin .blade.php -->
+        @include('parciales/estado-sesion')
         @yield('contenido')
     </body>
 

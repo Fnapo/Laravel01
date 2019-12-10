@@ -5,10 +5,10 @@
         <tbody>
             <tr class="alto-2 margen-r">
                 <td>
-                    <label class="ancho-10 texto-c fondo-alice">Título:</label>
+                    <label class="ancho-10 texto-c fondo-alice fuente-20-bold">Título:</label>
                 </td>
                 <td>
-                    <input class="ancho-15 fondo-v" type="text" name="titulo"
+                    <input class="ancho-20 fondo-v fuente-20" type="text" name="titulo"
                         value="{{old('titulo', $proyecto['titulo'])}}" placeholder="Título del proyecto ...">
                 </td>
             </tr>
@@ -19,12 +19,12 @@
             </tr>
             <tr class="alto-3 margen-r">
                 <td>
-                    <label class="ancho-10 texto-c fondo-alice">Descripción:</label>
+                    <label class="ancho-10 texto-c fondo-alice fuente-20-bold">Descripción:</label>
                 </td>
                 <td>
-                    <textarea class="ancho-15 fondo-v margen alineado-v" name="descripcion"
-                        title="Descripción del proyecto ...">{{old('descripcion', $proyecto['descripcion'])}}
-                    </textarea>
+                    <textarea class="ancho-20 fondo-v margen alineado-v fuente-20" name="descripcion"
+                        placeholder="Descripción del proyecto ...">{{$proyecto == null
+                        ? old('descripcion') : old('descripcion', $proyecto['descripcion'])}}</textarea>
                 </td>
             </tr>
             <tr>
@@ -33,7 +33,7 @@
                 </td>
             </tr>
             <tr class="alto-3">
-                <td colspan="2" class="texto-c texto-20">
+                <td colspan="2" class="texto-c fuente-20-bold">
                     {{'Estos datos se guardarán en una BD.'}}
                 </td>
             </tr>

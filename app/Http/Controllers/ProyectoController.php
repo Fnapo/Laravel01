@@ -70,7 +70,7 @@ class ProyectoController extends Controller
         // Haré uso de un FormRequest en el update.
         Proyecto::create($contenido);
 
-        return redirect()->route('proyectos.index');
+        return redirect()->route('proyectos.index')->with('estado', 'Proyecto creado ...');
     }
 
     /**
@@ -119,7 +119,7 @@ class ProyectoController extends Controller
         // return $proyecto; // Mostrar tipo json bonito.
         $proyecto->update($contenido);
 
-        return redirect()->route('proyectos.show', $id);
+        return redirect()->route('proyectos.show', $id)->with('estado', 'Proyecto modificado ...');
         // Para no repetir route('proyectos.index')
     }
 
@@ -136,6 +136,6 @@ class ProyectoController extends Controller
 
         $proyecto->delete();
 
-        return redirect()->route('proyectos.index');
+        return redirect()->route('proyectos.index')->with('estado', 'Proyecto eliminado ...');
     }
 }

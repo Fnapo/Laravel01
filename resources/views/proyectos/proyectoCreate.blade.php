@@ -8,7 +8,7 @@ Proyectos | Crear un proyecto
 <div>
     <h1 class="texto-c">Creando un proyecto</h1>
     <form method="POST" action="{{route('proyectos.store')}}">
-        @include('proyectos/parciales/proyectoTomarDatos')
+        @include('parciales/proyectos/proyectoTomarDatos')
     </form>
 </div>
 @endsection

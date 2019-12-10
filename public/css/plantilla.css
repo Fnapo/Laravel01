@@ -31,7 +31,7 @@ a.desactivado {
     padding: 4px;
 }
 
-.boton-caja:hover {
+.caja-boton:hover {
     background-color: aliceblue;
 }
 
@@ -45,10 +45,6 @@ a.color-az {
 
 [class^="input"] {
     font-size: larger;
-}
-
-.ancho-15 {
-    width: 15em;
 }
 
 .boton-normal {
@@ -67,19 +63,32 @@ a.color-az {
     text-align: center;
 }
 
-.texto-20 {
+[class*="fuente-20"] {
     font-size: 20px;
+}
+
+[class*="-bold"] {
+    font-weight: bolder;
 }
 
 .fondo-alice {
     background-color: aliceblue;
-    font-size: larger;
-    font-weight: bolder;
+}
+
+[class*="ancho-"] {
+    display: inline-block;
 }
 
 .ancho-10 {
     width: 10em;
-    display: inline-block;
+}
+
+.ancho-15 {
+    width: 15em;
+}
+
+.ancho-20 {
+    width: 20em;
 }
 
 .alto-2 {

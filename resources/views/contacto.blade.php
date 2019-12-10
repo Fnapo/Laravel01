@@ -14,19 +14,19 @@
         <table>
             <thead></thead>
             <tbody>
-                <tr class="alto2 margen-r">
+                <tr class="alto-2 margen-r">
                     <td>
-                        <label class="ancho10 texto-c fondo-alice">Nombre:</label>
+                        <label class="ancho-10 texto-c fondo-alice fuente-20-bold">Nombre:</label>
                     </td>
                     <td>
-                        <input class="ancho-15 fondo-v" type="text" name="nombre" value="{{old('nombre')}}"
+                        <input class="ancho-15 fondo-v fuente-20" type="text" name="nombre" value="{{old('nombre')}}"
                             placeholder="Tu nombre ...">
                     </td>
                     <td>
-                        <label class="ancho10 texto-c fondo-alice">email:</label>
+                        <label class="ancho-10 texto-c fondo-alice fuente-20-bold">email:</label>
                     </td>
                     <td>
-                        <input class="ancho-15 fondo-v" type="email" name="email" value="{{old('email')}}"
+                        <input class="ancho-15 fondo-v fuente-20" type="email" name="email" value="{{old('email')}}"
                             placeholder="Tu email ...">
                     </td>
                 </tr>
@@ -38,19 +38,19 @@
                         <label>{{$errors->first('email')}}</label>
                     </td>
                 </tr>
-                <tr class="alto3 margen-r">
+                <tr class="alto-3 margen-r">
                     <td>
-                        <label class="ancho10 texto-c fondo-alice">Asunto:</label>
+                        <label class="ancho-10 texto-c fondo-alice fuente-20-bold">Asunto:</label>
                     </td>
                     <td>
-                        <input class="ancho-15 fondo-v" type="text" name="asunto" value="{{old('asunto')}}"
+                        <input class="ancho-15 fondo-v fuente-20" type="text" name="asunto" value="{{old('asunto')}}"
                             placeholder="Asunto del correo ...">
                     </td>
                     <td>
-                        <label class="ancho10 texto-c fondo-alice alineado-v">Mensaje:</label>
+                        <label class="ancho-10 texto-c fondo-alice alineado-v fuente-20-bold">Mensaje:</label>
                     </td>
                     <td>
-                        <textarea class="ancho-15 fondo-v margen alineado-v" name="mensaje"
+                        <textarea class="ancho-15 fondo-v alineado-v fuente-20" name="mensaje"
                             placeholder="Tu mensaje ...">{{old('mensaje')}}</textarea>
                     </td>
                 </tr>
@@ -62,8 +62,8 @@
                         <label>{{$errors->first('mensaje')}}</label>
                     </td>
                 </tr>
-                <tr class="alto3">
-                    <td colspan="4" class="texto-c texto-20">
+                <tr class="alto-3">
+                    <td colspan="4" class="texto-c fuente-20-bold">
                         {{'Tus datos no se publicarán'}}
                     </td>
                 </tr>

@@ -10,7 +10,7 @@ Proyectos | Editar un proyecto
     <form method="POST" action="{{route('proyectos.update', $proyecto->id)}}">
         @method('PATCH')
         <!-- Crea un campo oculto con el method PUTCH -->
-        @include('proyectos/parciales/proyectoTomarDatos')
+        @include('parciales/proyectos/proyectoTomarDatos')
     </form>
 </div>
 @endsection

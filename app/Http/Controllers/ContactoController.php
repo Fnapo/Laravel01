@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\MensajeRecibido;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactoController extends Controller
 {
@@ -42,14 +43,16 @@ class ContactoController extends Controller
             'nombre' => 'required',
             'email' => 'email|required',
             'asunto' => ['required'],
-            'mensaje' => ['required', 'min:3']
+            'mensaje' => ['required', 'min:3'],
             // min (o max) con strings indica la longitud mínima.
             // size indica una longitud fija.
         ]);
-        //Mail::to('napoleoniii@hotmail.com')->queue(new MensajeRecibido($contenido));
-        return (new MensajeRecibido($contenido)); // Para verlo en el navegador.
+        Mail::to('napoleoniii@hotmail.com')->queue(new MensajeRecibido($contenido)); // Envío a storage/logs ...
+        // o a otro driver de email.
+        // return (new MensajeRecibido($contenido)); // Para verlo en el navegador. Pero hay problemas con el uso
+        // de la actualización del navegador, pregunta si quieres reenviar el formulario. Uso back o redirect con with.
 
-        //return $nombre;
+        return redirect()->route('home')->with('estado', 'Mensaje enviado ...');
     }
 
     /**
