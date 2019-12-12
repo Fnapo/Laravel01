@@ -10,5 +10,19 @@
         <li> <a href="{{route('proyectos.index')}}" class="{{desActivar('proyectos.index')}}">Proyectos</a>
         </li>
         <li> <a href="{{route('contacto')}}" class="{{desActivar('contacto')}}">Contacto</a> </li>
+        @guest
+        <li>
+            <a href="{{route('login')}}" class="{{desActivar('login')}}">Login</a>
+        </li>
+        @else
+        <li>
+            <form method="POST" action="{{route('logout')}}">
+                @csrf
+                <button type="submit" value="Logout" class="color-az caja-vacia sin-bordes">
+                    <u>Logout</u>
+                </button>
+            </form>
+        </li>
+        @endguest
     </ul>
 </nav>

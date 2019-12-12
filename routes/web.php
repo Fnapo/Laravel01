@@ -74,3 +74,9 @@ Route::resource('proyectos', 'ProyectoController'); // El nombre del controlador
 Para tratar (validar) el form creo un nuevo controlador. De momento sólo con store.
  */
 Route::resource('contacto', 'ContactoController')->only('store');
+
+// Las siguiente rutas son creadas para/por la autentificación.
+Auth::routes(['register' => false]);
+
+// Route::get('/home', 'HomeController@index')->name('home'); // Esta se puede ignorar. No es necesario borrar el controller asociado,
+// pero sí modificar los controllers login y register con: $redirecTo='/';
