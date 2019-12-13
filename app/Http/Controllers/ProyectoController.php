@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class ProyectoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index', 'show'); // Protección de ciertas rutas.
+    }
+
     /**
      * Display a listing of the resource.
      *

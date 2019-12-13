@@ -23,20 +23,27 @@
 <div>
     <?php $vacio = "Sin proyectos para mostrar"; ?>
     <h1 class="texto-c">Proyectos</h1>
+    <br/>
+    @auth
     <div class="texto-c">
         <button class="caja-boton bordes-2">
             <a class="boton-normal" href="{{route('proyectos.create')}}">{{'Crear un proyecto'}}</a>
         </button>
     </div>
-    <br />
+    <br/>
+    @endauth
     @isset($proyectos)
     <div class="centraTabla">
-        <table class="tabla colapsada texto-c">
+        <table class="tabla tabla-i-b colapsada">
             <thead>
                 @if ($proyectos->count() > 0)
                 <tr>
                     <th class="celda">{{'Título del proyecto'}}</th>
-                    <th class="celda" colspan="2">{{'Acciones'}}</th>
+                    @auth
+                    <th class="celda" colspan="2">
+                        {{'Acciones'}}
+                    </th>
+                    @endauth
                 </tr>
                 @else
                 <tr>
@@ -51,6 +58,7 @@
                         <a class="color-az" href="{{route('proyectos.show', $proyecto->id)}}">{{$proyecto->titulo}}</a>
                         <!-- route('nombre', parámetros)-->
                     </td>
+                    @auth
                     <td class="celda">
                         <button type="button" class="caja-boton bordes-2">
                             <a class="boton-normal" href="{{route('proyectos.edit', $proyecto->id)}}">{{'Editar'}}</a>
@@ -64,6 +72,7 @@
                             <input type="submit" class="boton-peligro pad-4" value="Borrar">
                         </form>
                     </td>
+                    @endauth
                 </tr>
                 @empty
                 <tr>

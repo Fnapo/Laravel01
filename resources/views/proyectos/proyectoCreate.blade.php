@@ -7,6 +7,7 @@ Proyectos | Crear un proyecto
 @section('contenido')
 <div>
     <h1 class="texto-c">Creando un proyecto</h1>
+    <br/>
     <form method="POST" action="{{route('proyectos.store')}}">
         @include('parciales/proyectos/proyectoTomarDatos')
     </form>

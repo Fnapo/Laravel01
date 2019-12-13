@@ -80,3 +80,4 @@ Auth::routes(['register' => false]);
 
 // Route::get('/home', 'HomeController@index')->name('home'); // Esta se puede ignorar. No es necesario borrar el controller asociado,
 // pero sí modificar los controllers login y register con: $redirecTo='/';
+// con 'register' => false se impide el acceso a ciertas rutas sin estar autentificado.

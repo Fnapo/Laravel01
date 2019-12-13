@@ -8,13 +8,14 @@ Proyectos | {{$proyecto->titulo}}
 @section('contenido')
 <div>
     <h1 class="texto-c">Datos de {{$proyecto->titulo}}</h1>
+    <br/>
     <?php
         $vacio='Proyecto vacío.';
         $proyecto=json_decode($proyecto, true); // Pasar JSON a Array.
     ?>
     @isset($proyecto)
     <div class="centraTabla">
-        <table class="tabla texto-c">
+        <table class="tabla tabla-i-b">
             <thead>
                 <tr>
                     @forelse ($proyecto as $atributo => $valor)
