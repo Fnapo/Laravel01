@@ -1,12 +1,14 @@
 @extends('plantilla')
 
-@section('titulo', 'Contact')
+@section('titulo')
+@lang('Contact')
+@endsection
 
 @section('contenido')
 <!-- Para indentar -->
 <div>
-    <h1 class="texto-c">Contact</h1>
-    <br/>
+    <h1 class="texto-c">@lang('Contact')</h1>
+    <br />
     <!-- Para soporat method="post" necesito un nuevo controlador.
         Como recibe el form necesito el método store -->
     <form method="post" action="{{route('contacto.store')}}">
@@ -18,50 +20,50 @@
                 <tbody>
                     <tr class="alto-2 margen-r">
                         <td>
-                            <label class="ancho-10 texto-c fondo-alice fuente-20-bold">Nombre:</label>
+                            <label class="ancho-10 texto-c fondo-alice sin-margen fuente-20-bold">Nombre:</label>
                         </td>
                         <td>
                             <input class="ancho-15 fondo-v fuente-20" type="text" name="nombre"
                                 value="{{old('nombre')}}" placeholder="Tu nombre ...">
                         </td>
                         <td>
-                            <label class="ancho-10 texto-c fondo-alice fuente-20-bold">email:</label>
+                            <label class="ancho-10 texto-c fondo-alice sin-margen fuente-20-bold">email:</label>
                         </td>
                         <td>
-                            <input class="ancho-15 fondo-v fuente-20" type="email" name="email" value="{{old('email')}}"
-                                placeholder="Tu email ...">
+                            <input class="ancho-15 fondo-v fuente-20" type="email" name="email"
+                                value="{{old('email')}}" placeholder="Tu email ...">
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2" class="texto-c color-r">
-                            <label>{{$errors->first('nombre')}}</label>
+                            <label><strong>{{$errors->first('nombre')}}</strong></label>
                         </td>
                         <td colspan="2" class="texto-c color-r">
-                            <label>{{$errors->first('email')}}</label>
+                            <label><strong>{{$errors->first('email')}}</strong></label>
                         </td>
                     </tr>
                     <tr class="alto-3 margen-r">
                         <td>
-                            <label class="ancho-10 texto-c fondo-alice fuente-20-bold">Asunto:</label>
+                            <label class="ancho-10 texto-c fondo-alice sin-margen fuente-20-bold">Asunto:</label>
                         </td>
                         <td>
                             <input class="ancho-15 fondo-v fuente-20" type="text" name="asunto"
                                 value="{{old('asunto')}}" placeholder="Asunto del correo ...">
                         </td>
                         <td>
-                            <label class="ancho-10 texto-c fondo-alice alineado-v fuente-20-bold">Mensaje:</label>
+                            <label class="ancho-10 texto-c fondo-alice sin-margen fuente-20-bold">Mensaje:</label>
                         </td>
                         <td>
-                            <textarea class="ancho-15 fondo-v alineado-v fuente-20" name="mensaje"
+                            <textarea class="ancho-15 fondo-v fuente-20" name="mensaje"
                                 placeholder="Tu mensaje ...">{{old('mensaje')}}</textarea>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2" class="texto-c color-r">
-                            <label>{{$errors->first('asunto')}}</label>
+                            <label><strong>{{$errors->first('asunto')}}</strong></label>
                         </td>
                         <td colspan="2" class="texto-c color-r">
-                            <label>{{$errors->first('mensaje')}}</label>
+                            <label><strong>{{$errors->first('mensaje')}}</strong></label>
                         </td>
                     </tr>
                     <tr class="alto-3">
@@ -84,23 +86,23 @@
         </div>
         <!--
     <p class="alto2">
-        <label class="ancho10 texto-c fondo-alice">Nombre:</label>
+        <label class="ancho10 texto-c fondo-alice sin-margen">Nombre:</label>
         <input class="ancho-15 fondo-v" type="text" name="nombre"
              placeholder="Tu nombre ..."><br />
         <label class=""></label>
     </p>
     <p class="alto2">
-        <label class="ancho10 texto-c fondo-alice">email:</label>
+        <label class="ancho10 texto-c fondo-alice sin-margen">email:</label>
         <input class="ancho-15 fondo-v" type="email" name="email" placeholder="Tu email ...">
     </p>
     <p class="alto2">
-        <label class="ancho10 texto-c fondo-alice">Asunto:</label>
+        <label class="ancho10 texto-c fondo-alice sin-margen">Asunto:</label>
         <input class="ancho-15 fondo-v" type="text" name="asunto"
              placeholder="Asunto del correo ...">
     </p>
     <p class="alto3">
-        <label class="ancho10 texto-c fondo-alice alineado-v">Mensaje:</label>
-        <textarea class="ancho-15 fondo-v margen alineado-v" name="mensaje" "
+        <label class="ancho10 texto-c fondo-alice sin-margen">Mensaje:</label>
+        <textarea class="ancho-15 fondo-v margen" name="mensaje" "
             placeholder="Tu mensaje ..."></textarea>
 
     </p>

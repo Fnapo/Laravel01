@@ -4,7 +4,7 @@
 Proyectos | Crear un proyecto
 @endsection
 
-@section('contenido')
+@section('content')
 <div>
     <h1 class="texto-c">Creando un proyecto</h1>
     <br/>

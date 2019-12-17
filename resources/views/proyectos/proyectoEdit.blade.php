@@ -4,7 +4,7 @@
 Proyectos | Editar un proyecto
 @endsection
 
-@section('contenido')
+@section('content')
 <div>
     <h1 class="texto-c">Editando un proyecto</h1>
     <br/>

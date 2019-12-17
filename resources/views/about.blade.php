@@ -1,8 +1,10 @@
 @extends('plantilla')
 
-@section('titulo', 'About')
+@section('titulo')
+@lang('About')
+@endsection
 
 @section('contenido')
-    <h1 class="texto-c">About</h1>
-    <br/>
+<h1 class="texto-c">@lang('About')</h1>
+<br />
 @endsection

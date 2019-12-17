@@ -5,7 +5,7 @@ Proyectos | {{$proyecto->titulo}}
 <!-- Dudo de la utilidad de usar acentos en los campos de la BD -->
 @endsection
 
-@section('contenido')
+@section('content')
 <div>
     <h1 class="texto-c">Datos de {{$proyecto->titulo}}</h1>
     <br/>

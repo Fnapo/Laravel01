@@ -1,8 +1,8 @@
 @extends('plantilla')
 
-@section('titulo', 'proyectos')
+@section('titulo', 'Proyectos')
 
-@section('contenido')
+@section('content')
 <!-- Lo cambio a tabla
 
 <ul>
